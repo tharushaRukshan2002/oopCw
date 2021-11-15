@@ -3,16 +3,12 @@ public abstract class Driver {
     private String country;
     private String team;
 
-    public Driver() {
-
-    }
 
     public Driver(String name, String country, String team) {
         this.name = name;
         this.country = country;
         this.team = team;
     }
-
 
     public String getName() {
         return name;

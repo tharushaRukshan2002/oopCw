@@ -5,9 +5,6 @@ public class Formula1Driver extends Driver {
     private int totalPoints ;
     private int totalNumberOfRacers;
 
-    public Formula1Driver(){
-
-    }
     public Formula1Driver(String name, String country, String team){
         super(name, country, team);
     }
@@ -51,9 +48,20 @@ public class Formula1Driver extends Driver {
         this.totalNumberOfRacers = totalNumberOfRacers;
     }
 
+
+    /**
+     * This method will show all the details of a selected driver.
+     */
     public void displayInfo(){
-        System.out.println(getName());
-        System.out.println(getCountry());
+        System.out.println("\n--Showing details of the Driver--");
+        System.out.println("\nName: " + getName());
+        System.out.println("Team: " + getTeam());
+        System.out.println("Country: " + getCountry());
+        System.out.println("Points: " + getTotalPoints());
+        System.out.println("Positions:");
+        System.out.println("\t1st places earned: " + getFirstPositions());
+        System.out.println("\t2nd places earned: " + getSecondPositions());
+        System.out.println("\t3rd places earned: " + getThirdPositions());
     }
 }
 
