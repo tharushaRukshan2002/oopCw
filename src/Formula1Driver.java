@@ -1,35 +1,40 @@
-public class Formula1Driver extends Driver {
-    private int FirstPositions;
-    private int SecondPositions;
-    private int ThirdPositions;
+/**
+ * This class is extends driver class and this class contains details about driver details
+ * number of first, second, Third positions, total points
+ */
+public class Formula1Driver extends Driver  {
+    private int firstPositions;
+    private int secondPositions;
+    private int thirdPositions;
     private int totalPoints ;
     private int totalNumberOfRacers;
 
-    public Formula1Driver(String name, String country, String team){
-        super(name, country, team);
+    public Formula1Driver(String name, String country, String teams){
+        super(name, country,teams );
+
     }
     public int getFirstPositions() {
-        return FirstPositions;
+        return firstPositions;
     }
 
     public void setFirstPositions(int firstPositions) {
-        FirstPositions = firstPositions;
+        this.firstPositions = firstPositions;
     }
 
     public int getSecondPositions() {
-        return SecondPositions;
+        return secondPositions;
     }
 
     public void setSecondPositions(int secondPositions) {
-        SecondPositions = secondPositions;
+        this.secondPositions = secondPositions;
     }
 
     public int getThirdPositions() {
-        return ThirdPositions;
+        return thirdPositions;
     }
 
     public void setThirdPositions(int thirdPositions) {
-        ThirdPositions = thirdPositions;
+        this.thirdPositions = thirdPositions;
     }
 
     public int getTotalPoints() {
@@ -63,6 +68,64 @@ public class Formula1Driver extends Driver {
         System.out.println("\t2nd places earned: " + getSecondPositions());
         System.out.println("\t3rd places earned: " + getThirdPositions());
     }
+
+    /**
+     * This will update points
+     */
+    public void updatePoints(int choice){
+        switch (choice) {
+            case 0 ->{
+                totalNumberOfRacers +=1;
+            }
+            case 1 -> {
+                totalPoints += 25;
+                firstPositions += 1;
+                totalNumberOfRacers += 1;
+            }
+            case 2 -> {
+                totalPoints += 18;
+                secondPositions += 1;
+                totalNumberOfRacers += 1;
+            }
+            case 3 -> {
+                totalPoints += 15;
+                thirdPositions += 1;
+                totalNumberOfRacers += 1;
+            }
+            case 4 -> {
+                totalPoints += 12;
+                totalNumberOfRacers += 1;
+            }
+            case 5 -> {
+                totalPoints += 10;
+                totalNumberOfRacers += 1;
+            }
+            case 6 -> {
+                totalPoints += 8;
+                totalNumberOfRacers += 1;
+            }
+            case 7 -> {
+                totalPoints += 6;
+                totalNumberOfRacers += 1;
+            }
+            case 8 -> {
+                totalPoints += 4;
+                totalNumberOfRacers += 1;
+            }
+            case 9 -> {
+                totalPoints += 2;
+                totalNumberOfRacers += 1;
+            }
+            case 10 -> {
+                totalPoints += 1;
+                totalNumberOfRacers += 1;
+            }
+            default -> totalNumberOfRacers += 1;
+        }
+
+}
+
+
 }
 
 

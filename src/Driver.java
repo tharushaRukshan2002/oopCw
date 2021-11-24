@@ -1,8 +1,9 @@
-public abstract class Driver {
+import java.io.Serializable;
+
+public abstract class Driver implements Serializable {
     private String name;
     private String country;
     private String team;
-
 
     public Driver(String name, String country, String team) {
         this.name = name;
@@ -33,4 +34,5 @@ public abstract class Driver {
     public void setTeam(String team) {
         this.team = team;
     }
+
 }
