@@ -11,15 +11,12 @@ import java.util.*;
  */
 
 public class Formula1ChampionshipManager implements ChampionshipManager {
-
     private int numOfDrivers;
     private int numOfCars;
     private final Scanner sc = new Scanner(System.in);
     private ArrayList<Formula1Driver> drivers = new ArrayList<>();
     private  ArrayList<Race> races = new ArrayList<>();
     private ArrayList<Formula1Driver> copy = new ArrayList<>();//to get a shallow copy while sorting
-
-
 
     public int getNumOfDrivers() {
         return numOfDrivers;
@@ -283,7 +280,6 @@ public class Formula1ChampionshipManager implements ChampionshipManager {
                     getRaces().add(new Race(date, getDrivers().get(i).getName(), position));
                     positions[i] = position;
                     i++;
-
                 }
                 System.out.println(dateFormat.format(date));
 

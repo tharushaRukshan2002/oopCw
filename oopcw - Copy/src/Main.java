@@ -33,7 +33,7 @@ public class Main {
 //            Date d1 = k.getDate();
 //            System.out.println(dateFormat.format(d1));
 //        }
-//        one.mainMethod();
+        one.mainMethod();
         new MainGui();
 
     }
